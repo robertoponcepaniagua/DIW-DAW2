@@ -9,7 +9,6 @@
 @use "../tokens" as *;
 @use "../mixins" as *;
 
-
 .cabecera {
   grid-area: cabecera;
 }
@@ -30,34 +29,45 @@
   grid-area: pie;
 }
 
-
+.destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  gap: $space-md;
+}
 
 .pagina {
   min-height: 100dvh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "cabecera"
-  "heroe"
-  "principal"
-  "consejos"
-  "pie"
-  ;
+    "cabecera"
+    "heroe"
+    "principal"
+    "consejos"
+    "pie";
 
   @include desde($bp-md) {
     grid-template-columns: 1fr 16rem;
     grid-template-areas:
-    "cabecera cabecera "
-    "heroe heroe  "
-    "principal consejos"
-    "pie pie"
-    ;
+      "cabecera cabecera "
+      "heroe heroe  "
+      "principal consejos"
+      "pie pie";
   }
 
   @include desde($bp-lg) {
     max-width: $space-md;
     margin-inline: auto;
   }
+}
+
+.hueco-ficha {
+  container-type: inline-size;
+}
+
+.ficha {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .principal {
