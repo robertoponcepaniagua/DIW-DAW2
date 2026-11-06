@@ -9,8 +9,55 @@
 @use "../tokens" as *;
 @use "../mixins" as *;
 
+
+.cabecera {
+  grid-area: cabecera;
+}
+
+.heroe {
+  grid-area: heroe;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.consejos {
+  grid-area: consejos;
+}
+
+.pie {
+  grid-area: pie;
+}
+
+
+
 .pagina {
   min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "cabecera"
+  "heroe"
+  "principal"
+  "consejos"
+  "pie"
+  ;
+
+  @include desde($bp-md) {
+    grid-template-columns: 1fr 16rem;
+    grid-template-areas:
+    "cabecera cabecera "
+    "heroe heroe  "
+    "principal consejos"
+    "pie pie"
+    ;
+  }
+
+  @include desde($bp-lg) {
+    max-width: $space-md;
+    margin-inline: auto;
+  }
 }
 
 .principal {
