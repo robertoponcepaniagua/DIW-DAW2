@@ -1,5 +1,5 @@
 // _layout.scss — ✍️ A1 · el esqueleto de la página de inicio con Grid (el relleno fluido, A4, ya está puesto)
-//
+
 // ✍️ A1. La .pagina tiene cinco hijos: .cabecera, .heroe, .principal, .consejos y .pie.
 //    - En móvil (sin media query): un grid con grid-template-areas, una columna, en ese orden.
 //    - Desde $bp-md: dos columnas (la del principal se estira; la de los consejos, un ancho fijo en rem).
@@ -56,18 +56,9 @@
   }
 
   @include desde($bp-lg) {
-    max-width: $space-md;
+    max-width: 75rem;
     margin-inline: auto;
   }
-}
-
-.hueco-ficha {
-  container-type: inline-size;
-}
-
-.ficha {
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .principal {
