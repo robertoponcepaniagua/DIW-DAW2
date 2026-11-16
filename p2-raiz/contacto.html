@@ -6,41 +6,43 @@
     <title>Contacto · RAÍZ</title>
     <link rel="stylesheet" href="/src/tailwind.css" />
   </head>
-  <body class="bg-fondo text-texto min-h-screen flex flex-col">
+  <body class="bg-fondo text-texto">
     <!-- ✍️ B3 · Esta página va SOLO con Tailwind (src/tailwind.css), sin SASS. Ponle las clases de utilidad:
          los colores de RAÍZ (del @theme), dos columnas desde md y un botón con hover: y focus-visible:.
          Nada de valores sueltos entre corchetes ni style="". -->
-    <header class="bg-tierra flex flex-wrap justify-between gap-4 px-5 py-3 font-bold">
-      <a href="/">RAÍZ</a>
-      <nav aria-label="Principal" class="flex gap-5">
+    <header class="bg-marca-oscuro text-white p-4">
+      <a href="/" class="text-2xl font-bold">RAÍZ</a>
+      <nav aria-label="Principal" class="flex gap-4 mt-2">
         <a href="/">Inicio</a>
         <a href="/producto.html">Monstera</a>
-        <a href="/contacto.html" aria-current="page">Contacto</a>
+        <a href="/contacto.html" aria-current="page" class="underline">Contacto</a>
       </nav>
     </header>
 
-    <main class="flex-1 max-w-5xl w-full mx-auto px-5 py-10">
-      <h1 class="text-3xl font-bold text-marca mb-8">Contacto</h1>
+    <main class="max-w-4xl mx-auto p-6">
+      <h1 class="text-3xl font-bold text-marca mb-6">Contacto</h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <section aria-label="Dónde estamos" class="bg-marca-suave p-6 rounded-md">
-          <h2 class="text-2xl font-bold text-marca-oscuro mb-4">El vivero</h2>
-          <p class="mb-4">Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.</p>
-          <p class="font-bold text-tierra">Envíos gratis desde 40 €</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <section aria-label="Dónde estamos" class="bg-marca-suave p-4 rounded-md">
+          <h2 class="text-2xl font-bold mb-4">El vivero</h2>
+          <p class="leading-relaxed">
+            Abrimos de lunes a sábado, de 9:00 a 14:00. Si vienes en persona, te ayudamos a elegir.
+          </p>
+          <p class="text-tierra font-bold mt-4">Envíos gratis desde 40 €</p>
         </section>
 
         <form action="#" class="flex flex-col gap-4">
-          <label for="nombre" class="flex flex-col gap-2 font-semibold">
+          <label for="nombre" class="flex flex-col gap-1 text-marca-oscuro">
             Nombre
             <input
               id="nombre"
               name="nombre"
               autocomplete="name"
               required
-              class="bg-white border border-marca rounded-md p-2 font-normal"
+              class="bg-white text-texto border border-marca rounded-md p-2"
             />
           </label>
-          <label for="correo" class="flex flex-col gap-2 font-semibold">
+          <label for="correo" class="flex flex-col gap-1 text-marca-oscuro">
             Correo
             <input
               id="correo"
@@ -48,22 +50,22 @@
               type="email"
               autocomplete="email"
               required
-              class="bg-white border border-marca rounded-md p-2 font-normal"
+              class="bg-white text-texto border border-marca rounded-md p-2"
             />
           </label>
-          <label for="mensaje" class="flex flex-col gap-2 font-semibold">
+          <label for="mensaje" class="flex flex-col gap-1 text-marca-oscuro">
             ¿En qué te ayudamos?
             <textarea
               id="mensaje"
               name="mensaje"
               rows="4"
               required
-              class="bg-white border border-marca rounded-md p-2 font-normal"
+              class="bg-white text-texto border border-marca rounded-md p-2"
             ></textarea>
           </label>
           <button
             type="submit"
-            class="bg-marca text-white font-bold p-3 rounded-md hover:bg-marca-oscuro focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca"
+            class="bg-marca text-white p-3 rounded-md font-bold cursor-pointer hover:bg-marca-oscuro focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca"
           >
             Enviar
           </button>
@@ -71,6 +73,6 @@
       </div>
     </main>
 
-    <footer class="bg-tierra text-center p-4 font-bold">RAÍZ, vivero online · Cádiz</footer>
+    <footer class="bg-marca-suave p-4">RAÍZ, vivero online · Cádiz</footer>
   </body>
 </html>
